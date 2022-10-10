@@ -1,4 +1,8 @@
-import { extendTheme } from '@chakra-ui/react'
+import { defineStyleConfig, extendTheme } from '@chakra-ui/react'
+
+const Button = defineStyleConfig({})
+
+const brandRing = {}
 
 export const theme = extendTheme({
   styles: {
@@ -20,5 +24,39 @@ export const theme = extendTheme({
   fonts: {
     heading: `'Inter', sans-serif`,
     body: `'Inter', sans-serif`,
+  },
+  components: {
+    Button: {
+      baseStyle: {
+        letterSpacing: 'wide',
+        fontWeight: 'normal',
+      },
+      variants: {
+        primary: {
+          borderWidth: 1,
+          rounded: 'full',
+          color: 'brand.100',
+          borderColor: 'brand.100',
+          _hover: {
+            color: 'brand.500',
+            fontWeight: 'semibold',
+            backgroundColor: 'brand.100',
+            transform: 'scale(1.01)',
+          },
+        },
+        secondary: {
+          borderWidth: 1,
+          rounded: 'full',
+          color: 'brand.500',
+          borderColor: 'brand.500',
+          _hover: {
+            color: 'brand.100',
+            fontWeight: 'semibold',
+            backgroundColor: 'brand.500',
+            transform: 'scale(1.01)',
+          },
+        },
+      },
+    },
   },
 })
