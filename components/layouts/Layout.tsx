@@ -16,7 +16,7 @@ const Layout = ({ children }: Props) => {
         <meta name="description" content="About My Company" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Box pos="sticky" top={0} maxW="container.xl" mx="auto">
+      <Box pos="sticky" zIndex={2} top={0} maxW="container.xl" mx="auto">
         <Header />
       </Box>
       {children}
