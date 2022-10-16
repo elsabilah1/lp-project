@@ -43,7 +43,11 @@ const Button = (props: Props) => {
               ml={3}
             >
               <Image
-                src="/assets/icons/arrow-right-black.svg"
+                src={`/assets/icons/${
+                  props.variant === 'primary'
+                    ? 'arrow-right-black'
+                    : 'arrow-right'
+                }.svg`}
                 width={24}
                 height={24}
                 alt="arrow"
