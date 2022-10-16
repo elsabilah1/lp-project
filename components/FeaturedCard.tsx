@@ -3,7 +3,11 @@ import { motion } from 'framer-motion'
 import Image from 'next/future/image'
 import { useState } from 'react'
 
-const FeaturedCard = () => {
+interface Props {
+  bgImageUrl: string
+}
+
+const FeaturedCard = (props: Props) => {
   const [isHover, setIsHover] = useState(false)
 
   const CardContainer = chakra(motion.div)
@@ -18,7 +22,7 @@ const FeaturedCard = () => {
       onHoverEnd={() => setIsHover(false)}
     >
       <Box
-        bgImage="url('/assets/images/featured1.png')"
+        bgImage={`url(${props.bgImageUrl})`}
         bgRepeat="no-repeat"
         bgSize="cover"
         borderRadius={4}
