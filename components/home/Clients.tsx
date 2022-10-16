@@ -5,14 +5,14 @@ import Button from '../Button'
 
 const Clients = () => {
   return (
-    <Box bgColor={{ md: 'brand.500' }} color="brand.100">
+    <Box bgColor={{ lg: 'brand.500' }} color="brand.100">
       <Box
         mb={12}
-        px={{ base: 8, md: 4 }}
-        py={{ base: 8, md: 24 }}
-        mx={{ base: 4, md: 'auto' }}
+        px={{ base: 8, lg: 4 }}
+        py={{ base: 8, lg: 24 }}
+        mx={{ base: 4, lg: 'auto' }}
         bgColor="brand.500"
-        borderRadius={{ base: 16, md: 0 }}
+        borderRadius={{ base: 16, lg: 0 }}
         maxWidth="container.xl"
       >
         <Flex justifyContent="space-between">
@@ -25,7 +25,7 @@ const Clients = () => {
             >
               OUR CLIENTS
             </Heading>
-            <Text fontSize={{ base: 12, lg: 24 }} mb={{ base: 6, md: 12 }}>
+            <Text fontSize={{ base: 12, lg: 24 }} mb={{ base: 6, lg: 12 }}>
               We proudly present our latest featured works
             </Text>
           </Box>
@@ -35,7 +35,7 @@ const Clients = () => {
         </Flex>
         <Flex
           wrap="wrap"
-          justifyContent="space-evenly"
+          justifyContent={{ base: 'space-evenly', lg: 'space-between' }}
           columnGap={4}
           rowGap={10}
         >
@@ -58,8 +58,12 @@ const ClientItem = ({ small, name }: { small?: boolean; name: string }) => {
   return (
     <Box
       pos="relative"
-      minH={{ base: small ? '16' : '20', md: '28' }}
-      minW={{ base: small ? '16' : '28', md: small ? '2xs' : 'xs' }}
+      minH={{ base: small ? '16' : '20', md: '24', lg: '28' }}
+      minW={{
+        base: small ? '16' : '28',
+        md: small ? '24' : '2xs',
+        lg: small ? '2xs' : 'xs',
+      }}
       filter="grayscale(100%)"
       _hover={{ filter: 'grayscale(0%)' }}
     >
