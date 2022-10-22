@@ -1,8 +1,7 @@
-import { Box, Button, Flex, Heading, HStack, Text } from '@chakra-ui/react'
-import Image from 'next/future/image'
-import Link from 'next/link'
+import { Box, Flex, Heading, Text } from '@chakra-ui/react'
 import Logo from './Logo'
 import NavLists from './NavLists'
+import SocialLinks from './SocialLinks'
 
 const Footer = () => {
   return (
@@ -36,17 +35,7 @@ const Footer = () => {
         Karet Tengsin, Kecamatan Tanah Abang, Kota Jakarta Pusat, Daerah Khusus
         Ibukota Jakarta 10250
       </Text>
-      <HStack
-        mb={{ lg: 20, xl: 40 }}
-        justifyContent="center"
-        spacing={{ base: 2, lg: 4 }}
-      >
-        <SocialLink href="/" icon="facebook" />
-        <SocialLink href="/" icon="instagram" />
-        <SocialLink href="/" icon="linkedin" />
-        <SocialLink href="/" icon="twitter" />
-      </HStack>
-
+      <SocialLinks center />
       <Flex
         alignItems="center"
         justifyContent="space-between"
@@ -58,25 +47,6 @@ const Footer = () => {
         </Text>
       </Flex>
     </Box>
-  )
-}
-
-interface Props {
-  href: string
-  icon: string
-}
-
-const SocialLink = (props: Props) => {
-  return (
-    <Link href={props.href} target="_blank">
-      <Button variant="unstyled" size={{ base: 'xs', lg: 'md', '2xl': 'lg' }}>
-        <Image
-          src={`/assets/icons/social-${props.icon}.svg`}
-          alt={props.icon}
-          fill
-        />
-      </Button>
-    </Link>
   )
 }
 
