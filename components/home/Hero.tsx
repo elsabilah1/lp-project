@@ -46,6 +46,7 @@ const Hero = () => {
           title="Explore more"
           variant="primary"
           arrow
+          big
         />
       </Stack>
     </Box>

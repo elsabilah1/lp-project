@@ -67,16 +67,30 @@ const ContactForm = () => {
       <GridItem>
         <Stack gap={4}>
           <FormControl>
-            <FormLabel>Name</FormLabel>
-            <Input value={name} onChange={handleName} />
+            <FormLabel fontSize={{ base: 14, lg: 24 }}>Name</FormLabel>
+            <Input
+              value={name}
+              onChange={handleName}
+              fontSize={{ base: 14, lg: 24 }}
+            />
           </FormControl>
           <FormControl>
-            <FormLabel>Email</FormLabel>
-            <Input type="email" value={email} onChange={handleEmail} />
+            <FormLabel fontSize={{ base: 14, lg: 24 }}>Email</FormLabel>
+            <Input
+              type="email"
+              value={email}
+              onChange={handleEmail}
+              fontSize={{ base: 14, lg: 24 }}
+            />
           </FormControl>
           <FormControl>
-            <FormLabel>Message</FormLabel>
-            <Textarea value={message} onChange={handleMessage} size="xs" />
+            <FormLabel fontSize={{ base: 14, lg: 24 }}>Message</FormLabel>
+            <Textarea
+              value={message}
+              onChange={handleMessage}
+              size="xs"
+              fontSize={{ base: 14, lg: 24 }}
+            />
           </FormControl>
           <Flex>
             <Button title="Send message" variant="secondary" arrow />

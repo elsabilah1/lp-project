@@ -27,6 +27,7 @@ const Hero = () => {
           title="Get free consultation here"
           variant="primary"
           arrow
+          big
         />
       </GridItem>
     </Grid>

@@ -30,7 +30,7 @@ const Clients = () => {
             </Text>
           </Box>
           <Flex>
-            <Button title="See more" variant="primary" arrow />
+            <Button title="See more" variant="primary" arrow big />
           </Flex>
         </Flex>
         <Flex
