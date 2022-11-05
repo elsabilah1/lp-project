@@ -6,11 +6,13 @@ import { useState } from 'react'
 
 interface Props {
   bgImageUrl: string
+  title: string
+  label: string
 }
 
-const FeaturedCard = (props: Props) => {
-  const router = useRouter()
+const CareerCard = (props: Props) => {
   const [isHover, setIsHover] = useState(false)
+  const router = useRouter()
 
   const CardContainer = chakra(motion.div)
   const Overlay = chakra(motion.div)
@@ -19,7 +21,7 @@ const FeaturedCard = (props: Props) => {
   return (
     <CardContainer
       initial={false}
-      onClick={() => router.push('/works/1')}
+      onClick={() => router.push('/careers/1')}
       animate={isHover ? 'hover' : 'rest'}
       onHoverStart={() => setIsHover(true)}
       onHoverEnd={() => setIsHover(false)}
@@ -50,17 +52,17 @@ const FeaturedCard = (props: Props) => {
               textTransform="capitalize"
               mb={{ base: 1, lg: 2 }}
             >
-              mobile app
+              {props.label}
             </Text>
             <Heading
-              textTransform="uppercase"
+              textTransform="capitalize"
               fontSize={{ base: 14, md: 20, lg: 28 }}
               mb={{ base: 1, lg: 2 }}
             >
-              featured works
+              {props.title}
             </Heading>
             <Text fontSize={{ base: 11, md: 13, lg: 20 }} color="brand.400">
-              we proudly present our latest featured works
+              Click to see details
             </Text>
           </GridItem>
           <GridItem justifySelf="end" zIndex="2">
@@ -103,4 +105,4 @@ const FeaturedCard = (props: Props) => {
   )
 }
 
-export default FeaturedCard
+export default CareerCard
