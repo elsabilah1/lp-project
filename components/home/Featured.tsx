@@ -1,6 +1,6 @@
 import { Box, Flex, Grid, Heading, Text } from '@chakra-ui/react'
 import Button from '../Button'
-import FeaturedCard from '../FeaturedCard'
+import FeaturedCard from '../works/FeaturedCard'
 
 const Featured = () => {
   return (
